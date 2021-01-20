@@ -32,19 +32,23 @@ public class Main {
             }
 
             if (x == 3) {
+                System.out.println("Pessoas Físicas");
                 for (int i = 0; i < cadastroGeralPessoas.size(); i++) {
-                    Pessoa p = cadastroGeralPessoas.get(i);
-                    if (p instanceof PessoaFisica)
-                        System.out.println(i);
-
+                    if (cadastroGeralPessoas.get(i) instanceof PessoaFisica) {
+                        PessoaFisica p = (PessoaFisica) cadastroGeralPessoas.get(i);
+                        System.out.println("Nome: " + p.nome + " email: " + p.email + " telefone: " + p.telefone
+                                + " cpf: " + p.cpf);
+                    }
                 }
             }
             if (x == 4) {
+                System.out.println("Pessoas Físicas");
                 for (int i = 0; i < cadastroGeralPessoas.size(); i++) {
-                    Pessoa p = cadastroGeralPessoas.get(i);
-                    if (p instanceof PessoaJuridica)
-                        System.out.println(i);
-
+                    if (cadastroGeralPessoas.get(i) instanceof PessoaJuridica) {
+                        PessoaJuridica p = (PessoaJuridica) cadastroGeralPessoas.get(i);
+                        System.out.println("Nome: " + p.nome + " email: " + p.email + " telefone: " + p.telefone
+                                + " cpf: " + p.cnpj);
+                    }
                 }
             }
         } while (x != 5);
